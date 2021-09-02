@@ -18,6 +18,7 @@ public class LevelUp {
         String email;
         String dados;
         String confirmacaoInserir = "sim";
+        String confirmacaoLista;
         int inserirRemover;
 
 
@@ -70,7 +71,16 @@ public class LevelUp {
                 System.out.println("Este email não está cadastrado.");
             }
         }
-        System.out.println("Encerrando o programa.");
+        System.out.println("Deseja acessar a lista de alunos cadastrados? Responda com Sim ou Não");
+        confirmacaoLista = leitor.next();
+        if (confirmacaoLista.equals("Sim") | confirmacaoLista.equals("sim")){
+            for (String referencia: emailEDados.values()){
+                System.out.println(referencia);
+            }
+        }
+        else {
+            System.out.println("Encerrando o programa.");
+        }
     }
 }
 
